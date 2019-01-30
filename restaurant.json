@@ -1,0 +1,39 @@
+{
+  "food": [{
+  "name": "Crystal Shrimp Dumplings (Har Gow):",
+  "description": "Shrimp, soy sauce",
+  "price":5.00
+},
+
+{
+  "name": "Soup Dumplings (Xiao Long Bao):",
+  "description": "Shrimp, pork, soy sauce, green onion, garlic",
+  "price":3.00
+},
+
+{
+  "name": "Chicken Feet (Feng zhua):",
+  "description": "Chicken feet, soy sauce, chilli pepper",
+  "price": 4.00
+},
+
+{
+  "name": "Egg Tart (Don tot):",
+  "description": "Egg,flour, butter, sugar, egg, custard",
+  "price":1.50
+},
+
+{
+  "name":"Open-face-pork-and-shrimp dumplings (Siu mai):",
+  "description":"Shrimp, pork, oyester sauce, mushrooms",
+  "price":3.50
+},
+
+{
+  "name":"Deep fried red bean ball (Jian Dui):",
+  "description":"Red bean, sesame seeds, flour, sugar",
+  "price":1.00
+}
+
+]
+}

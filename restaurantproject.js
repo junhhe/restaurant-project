@@ -1,60 +1,63 @@
-var dims1 ={
-  name: "Crystal Shrimp Dumplings (Har Gow):",
-  meat: "Shrimp",
-  sauce: "Soy sauce",
-  price:5.00
-};
-
-var dims2 ={
-  name: "Soup Dumplings (Xiao Long Bao):",
-  meat: ["Shrimp","pork"],
-  sauce: "Soy sauce",
-  vegetables:["Green Onion", "Garlic"],
-  price:3.00
-};
-
-var dims3 ={
-  name: "Chicken Feet (Feng zhua):",
-  meat: "Chicken feet",
-  sauce: "Soy sauce",
-  vegetables:["Chili pepper"],
-  price: 4.00
-};
-
-var dims4 ={
-  name: "Egg Tart (Don tot):",
-  meat: ["Egg"," flour"," butter"],
-  sauce: ["sugar"," egg"," custard"],
-  price:1.50
-}
-
-var dims5 = {
-  name:"Open-face-pork-and-shrimp dumplings (Siu mai):",
-  meat:["Shrimp", "pork"],
-  sauce:"Oyester sauce",
-  vegetables:"mushrooms",
-  price:3.50
-}
-
-var dims6 = {
-  name:"Deep fried red bean ball (Jian Dui):",
-  meat:"Red bean",
-  sauce:["Flour", "sugar"],
-  vegetables:"Sesame seeds",
-  price:1.00
-}
-  
- function sum1() {
-   document.getElementById("dim1").innerHTML = dims1.name + "<br>" +dims1.meat + "<br>" + dims1.sauce + "<br>" + "$" + dims1.price;
- }
+var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+      if  (this.readyState == 4 && this.status == 200){   // I will do this when requirements are met
+      var mydata = JSON.parse(this.responseText);
+      
+    var hargow = mydata.food[0].price;
+    var hargowName = mydata.food[0].name;
+    
+    var bao = mydata.food[1].price;
+    var baoPrice = mydata.food[1].name;
+    
+    var feng = mydata.food[2].price;
+    var fengName = mydata.food[2].name;
+    
+    var don = mydata.food[3].price;
+    var donName = mydata.food[3].name;
+    
+    var siumai = mydata.food[4].price;
+    var siumaiName = mydata.food[4].name;
+    
+    var jian = mydata.food[5].price;
+    var jianName = mydata.food[5].name;
+      
+      
+ document.getElementById("sum1").innerHTML = mydata.food[0].meat + "$" + hargow + hargowName;
+      
+        
+      }
+      function dimsum1(){
+   var qty = document.getElementById('quantity1').value;
+ var total1 = ((qty * hargow)*1.04712).toFixed(2);
+ document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
+      }
+    };
+    xmlhttp.open("GET","restaurant.json",true);
+    xmlhttp.send();
  
+
+ var previous = null;
+var current = null;
+    setInterval(function(){
+        $.getJSON("json.Rest.json", function(json){
+            current = JSON.stringify(json);
+            if (previous && current && previous!==current){
+                location.reload();
+            }
+            previous = current;
+        });
+    }, 2000);
+ /*
+  function enter1() {
+        var qty = document.getElementById('quantity1').value;
+         var total1 = ((qty * hargow)*1.04712).toFixed(2);
+         
  function dimsum1(){
    var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * dims1.price)*1.04712).toFixed(2);
+ var total1 = ((qty * hargow)*1.04712).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-    localStorage.setItem("buy1", x);
-
   }
+
   
   function sum2() {
    document.getElementById("dim2").innerHTML = dims2.name + "<br>" +dims2.meat + "<br>" + dims2.sauce + "<br>" + dims2.vegetables + "<br>" + "$" + dims2.price;
@@ -113,3 +116,4 @@ function checkout(){
    localStorage.setItem("buy1", x);
   location.href = "checkoutpg.html";
 }
+*/
