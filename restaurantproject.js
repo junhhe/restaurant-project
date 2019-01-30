@@ -22,12 +22,12 @@ var xmlhttp = new XMLHttpRequest();
     var jianName = mydata.food[5].name;
       
       
- document.getElementById("sum1").innerHTML = mydata.food[0].description + "<br>" + "$" + hargow + "<br>" + hargowName;
- document.getElementById("sum2").innerHTML = mydata.food[0].description + "<br>" + "$" + bao + "<br>" + baoName;
- document.getElementById("sum3").innerHTML = mydata.food[0].description + "<br>" + "$" + feng + "<br>" + fengName;
- document.getElementById("sum4").innerHTML = mydata.food[0].description + "<br>" + "$" + don + "<br>" + donName;
- document.getElementById("sum5").innerHTML = mydata.food[0].description + "<br>" + "$" + siumai + "<br>" + siumaiName;
- document.getElementById("sum6").innerHTML = mydata.food[0].description + "<br>" + "$" + jian + "<br>" + jianName;
+ document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
+ document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
+ document.getElementById("sum3").innerHTML = fengName + "<br>" + "$" + feng + "<br>" + mydata.food[2].description;
+ document.getElementById("sum4").innerHTML = donName + "<br>" + "$" + don + "<br>" + mydata.food[3].description;
+ document.getElementById("sum5").innerHTML = siumaiName + "<br>" + "$" + siumai + "<br>" + mydata.food[4].description;
+ document.getElementById("sum6").innerHTML = jianName + "<br>" + "$" + jian + "<br>" + mydata.food[5].description;
       }
         
       function dimsum1(){
