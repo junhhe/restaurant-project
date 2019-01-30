@@ -32,7 +32,7 @@ var xmlhttp = new XMLHttpRequest();
         
       function dimsum1(){
    var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * mydata.food[0].price)*1.04712).toFixed(2);
+ var total1 = ((qty * hargow)*1.04712).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
       }
       
