@@ -7,7 +7,7 @@ var xmlhttp = new XMLHttpRequest();
     var hargowName = mydata.food[0].name;
     
     var bao = mydata.food[1].price;
-    var baoPrice = mydata.food[1].name;
+    var baoName = mydata.food[1].name;
     
     var feng = mydata.food[2].price;
     var fengName = mydata.food[2].name;
@@ -22,10 +22,14 @@ var xmlhttp = new XMLHttpRequest();
     var jianName = mydata.food[5].name;
       
       
- document.getElementById("sum1").innerHTML = mydata.food[0].description + "$" + hargow + hargowName;
-      
-        
+ document.getElementById("sum1").innerHTML = mydata.food[0].description + "<br>" + "$" + hargow + "<br>" + hargowName;
+ document.getElementById("sum2").innerHTML = mydata.food[0].description + "<br>" + "$" + bao + "<br>" + baoName;
+ document.getElementById("sum3").innerHTML = mydata.food[0].description + "<br>" + "$" + feng + "<br>" + fengName;
+ document.getElementById("sum4").innerHTML = mydata.food[0].description + "<br>" + "$" + don + "<br>" + donName;
+ document.getElementById("sum5").innerHTML = mydata.food[0].description + "<br>" + "$" + siumai + "<br>" + siumaiName;
+ document.getElementById("sum6").innerHTML = mydata.food[0].description + "<br>" + "$" + jian + "<br>" + jianName;
       }
+        
       function dimsum1(){
    var qty = document.getElementById('quantity1').value;
  var total1 = ((qty * hargow)*1.04712).toFixed(2);
