@@ -20,7 +20,7 @@ var xmlhttp = new XMLHttpRequest();
     
     var jian = mydata.food[5].price;
     var jianName = mydata.food[5].name;
-      
+      }
       
  document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
  document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
@@ -64,7 +64,7 @@ var xmlhttp = new XMLHttpRequest();
    var qty = document.getElementById('quantity6').value;
  var total1 = ((qty * mydata.food[5].price)*1.04712).toFixed(2);
  document.getElementById("buy6").innerHTML = "You total is" + " $" + total1;
-      }
+      
     }
     };
     xmlhttp.open("GET","restaurant.json",true);
