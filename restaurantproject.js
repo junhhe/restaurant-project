@@ -6,6 +6,12 @@ var xmlhttp = new XMLHttpRequest();
     var hargow = mydata.food[0].price;
     var hargowName = mydata.food[0].name;
     
+    function dimsum1(){
+   var qty = document.getElementById('quantity1').value;
+ var total1 = ((qty * hargow)*1.04712).toFixed(2);
+ document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
+      }
+      
     var bao = mydata.food[1].price;
     var baoName = mydata.food[1].name;
     
@@ -29,12 +35,7 @@ var xmlhttp = new XMLHttpRequest();
  document.getElementById("sum5").innerHTML = siumaiName + "<br>" + "$" + siumai + "<br>" + mydata.food[4].description;
  document.getElementById("sum6").innerHTML = jianName + "<br>" + "$" + jian + "<br>" + mydata.food[5].description;
       
-        
-      function dimsum1(){
-   var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * hargow)*1.04712).toFixed(2);
- document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-      }
+
       
       function dimsum2(){
    var qty = document.getElementById('quantity2').value;
@@ -82,6 +83,13 @@ var current = null;
             previous = current;
         });
     }, 2000);
+    
+    function checkout(){
+  var x = document.getElementById('buy1').value;
+  
+   localStorage.setItem("buy1", x);
+  location.href = "checkoutpg.html";
+}
  /*
   function enter1() {
         var qty = document.getElementById('quantity1').value;
@@ -145,10 +153,5 @@ function dimsum6(){
  document.getElementById("buy6").innerHTML = "You total is" + " $" + total6;
   }
   
-function checkout(){
-  var x = document.getElementById('buy1').value;
-  
-   localStorage.setItem("buy1", x);
-  location.href = "checkoutpg.html";
-}
+
 */
