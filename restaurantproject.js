@@ -21,12 +21,12 @@ var xmlhttp = new XMLHttpRequest();
     var jian = mydata.food[5].price;
     var jianName = mydata.food[5].name;
       
-    /*var one = Number(localStorage.setItem(hargow));
+    var one = Number(localStorage.setItem(hargow));
     var two = Number(localStorage.setItem(bao));
     var three = Number(localStorage.setItem(feng));
     var four = Number(localStorage.setItem(don));
     var five = Number(localStorage.setItem(siumai));
-    var six = Number(localStorage.setItem(jian));*/
+    var six = Number(localStorage.setItem(jian));
     
     document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
  document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
@@ -39,6 +39,7 @@ var xmlhttp = new XMLHttpRequest();
  
       
   function dimsum1(){
+    var uno = Number(localStorage.getItem(hargow));
    var qty = document.getElementById('quantity1').value;
  var total1 = ((qty * 1.04712)*hargow).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
