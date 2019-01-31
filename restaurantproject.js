@@ -28,12 +28,12 @@ var xmlhttp = new XMLHttpRequest();
     var jian = mydata.food[5].price;
     var jianName = mydata.food[5].name;
       
-    /*var one = Number(localStorage.setItem(hargow));
+    var one = Number(localStorage.setItem(hargow));
     var two = Number(localStorage.setItem(bao));
     var three = Number(localStorage.setItem(feng));
     var four = Number(localStorage.setItem(don));
     var five = Number(localStorage.setItem(siumai));
-    var six = Number(localStorage.setItem(jian));*/
+    var six = Number(localStorage.setItem(jian));
     
   document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
  document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
@@ -76,39 +76,9 @@ function dimsum4(){
       
       function dimsum6(){
    var qty = document.getElementById('quantity6').value;
- var total1 = ((qty * 1.04712)*jian).toFixed(2);
+ var total1 = ((qty * 1.04712)*1).toFixed(2);
  document.getElementById("buy6").innerHTML = "You total is" + " $" + total1;
       }
-      /*function dimsum2(){
-        var total = Number(localStorage.getItem(total1));
-   var qty = document.getElementById('quantity2').value;
- var total1 = ((qty * mydata.food[1].price)*1.04712).toFixed(2);
- document.getElementById("buy2").innerHTML = "You total is" + " $" + total1;
-      }
-      
-      function dimsum3(){
-   var qty = document.getElementById('quantity3').value;
- var total1 = ((qty * mydata.food[2].price)*1.04712).toFixed(2);
- document.getElementById("buy3").innerHTML = "You total is" + " $" + total1;
-      }
-      
-       function dimsum4(){
-   var qty = document.getElementById('quantity4').value;
- var total1 = ((qty * mydata.food[3].price)*1.04712).toFixed(2);
- document.getElementById("buy4").innerHTML = "You total is" + " $" + total1;
-      }
-      
-       function dimsum5(){
-   var qty = document.getElementById('quantity5').value;
- var total1 = ((qty * mydata.food[4].price)*1.04712).toFixed(2);
- document.getElementById("buy5").innerHTML = "You total is" + " $" + total1;
-      }
-      
-       function dimsum6(){
-   var qty = document.getElementById('quantity6').value;
- var total1 = ((qty * mydata.food[5].price)*1.04712).toFixed(2);
- document.getElementById("buy6").innerHTML = "You total is" + " $" + total1;
-    }*/
         
     
     xmlhttp.open("GET","restaurant.json",true);
