@@ -41,7 +41,7 @@ var xmlhttp = new XMLHttpRequest();
   function dimsum1(){
     var uno = Number(localStorage.getItem(hargow));
    var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * 1.04712)*hargow).toFixed(2);
+ var total1 = ((qty * 1.04712)*uno).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
   var total = Number(localStorage.getItem(total1));
   window.alert(hargow);
