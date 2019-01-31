@@ -6,12 +6,6 @@ var xmlhttp = new XMLHttpRequest();
     var hargow = mydata.food[0].price;
     var hargowName = mydata.food[0].name;
     
-    function dimsum1(){
-   var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * hargow)*1.04712).toFixed(2);
- document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-      }
-      
     var bao = mydata.food[1].price;
     var baoName = mydata.food[1].name;
     
@@ -26,7 +20,24 @@ var xmlhttp = new XMLHttpRequest();
     
     var jian = mydata.food[5].price;
     var jianName = mydata.food[5].name;
+      
+    var one = Number(localStorage.getItem(hargow));
+    var two = Number(localStorage.getItem(bao));
+    var three = Number(localStorage.getItem(feng));
+    var four = Number(localStorage.getItem(don));
+    var five = Number(localStorage.getItem(siumai));
+    var six = Number(localStorage.getItem(jian));
+
+
       }
+      
+    function dimsum1(){
+   var qty = document.getElementById('quantity1').value;
+ var total1 = ((qty * 1.04712)*one).toFixed(2);
+ document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
+  var total = Number(localStorage.getItem(total1));
+      }
+      
       
  document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
  document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
