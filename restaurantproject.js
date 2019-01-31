@@ -48,11 +48,11 @@ var xmlhttp = new XMLHttpRequest();
    var qty = document.getElementById('quantity1').value;
  var total1 = ((qty * 1.04712)*5).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-  var total = Number(localStorage.getItem(total1));
       }
   
       
       /*function dimsum2(){
+        var total = Number(localStorage.getItem(total1));
    var qty = document.getElementById('quantity2').value;
  var total1 = ((qty * mydata.food[1].price)*1.04712).toFixed(2);
  document.getElementById("buy2").innerHTML = "You total is" + " $" + total1;
