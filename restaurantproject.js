@@ -28,22 +28,16 @@ var xmlhttp = new XMLHttpRequest();
     var five = Number(localStorage.setItem(siumai));
     var six = Number(localStorage.setItem(jian));
     
-    document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
+  document.getElementById("sum1").innerHTML =  hargowName + "<br>" + "$" + hargow + "<br>" + mydata.food[0].description;
  document.getElementById("sum2").innerHTML = baoName + "<br>" + "$" + bao + "<br>" + mydata.food[1].description;
  document.getElementById("sum3").innerHTML = fengName + "<br>" + "$" + feng + "<br>" + mydata.food[2].description;
  document.getElementById("sum4").innerHTML = donName + "<br>" + "$" + don + "<br>" + mydata.food[3].description;
  document.getElementById("sum5").innerHTML = siumaiName + "<br>" + "$" + siumai + "<br>" + mydata.food[4].description;
  document.getElementById("sum6").innerHTML = jianName + "<br>" + "$" + jian + "<br>" + mydata.food[5].description;
+     
       }
       
- function dimsum1(){
-    var uno = Number(localStorage.getItem(hargow));
-   var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * 1.04712)*uno).toFixed(2);
- document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-  var total = Number(localStorage.getItem(total1));
-  window.alert(uno);
-      }
+ 
   
       
       /*function dimsum2(){
