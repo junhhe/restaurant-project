@@ -43,6 +43,7 @@ var xmlhttp = new XMLHttpRequest();
  var total1 = ((qty * 1.04712)*hargow).toFixed(2);
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
   var total = Number(localStorage.getItem(total1));
+  window.alert(hargow);
       }
       
       /*function dimsum2(){
