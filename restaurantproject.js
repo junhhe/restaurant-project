@@ -50,7 +50,35 @@ var xmlhttp = new XMLHttpRequest();
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
       }
   
+  function dimsum2(){
+   var qty = document.getElementById('quantity2').value;
+ var total1 = ((qty * 1.04712)*3).toFixed(2);
+ document.getElementById("buy2").innerHTML = "You total is" + " $" + total1;
+      }
       
+  function dimsum3(){
+   var qty = document.getElementById('quantity3').value;
+ var total1 = ((qty * 1.04712)*4).toFixed(2);
+ document.getElementById("buy3").innerHTML = "You total is" + " $" + total1;
+      }
+      
+function dimsum4(){
+   var qty = document.getElementById('quantity4').value;
+ var total1 = ((qty * 1.04712)*1.5).toFixed(2);
+ document.getElementById("buy4").innerHTML = "You total is" + " $" + total1;
+      }
+      
+    function dimsum5(){
+   var qty = document.getElementById('quantity5').value;
+ var total1 = ((qty * 1.04712)*3.5).toFixed(2);
+ document.getElementById("buy5").innerHTML = "You total is" + " $" + total1;
+      }
+      
+      function dimsum6(){
+   var qty = document.getElementById('quantity6').value;
+ var total1 = ((qty * 1.04712)*jian).toFixed(2);
+ document.getElementById("buy6").innerHTML = "You total is" + " $" + total1;
+      }
       /*function dimsum2(){
         var total = Number(localStorage.getItem(total1));
    var qty = document.getElementById('quantity2').value;
