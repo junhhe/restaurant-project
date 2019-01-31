@@ -21,12 +21,12 @@ var xmlhttp = new XMLHttpRequest();
     var jian = mydata.food[5].price;
     var jianName = mydata.food[5].name;
       
-    var one = Number(localStorage.getItem(hargow));
-    var two = Number(localStorage.getItem(bao));
-    var three = Number(localStorage.getItem(feng));
-    var four = Number(localStorage.getItem(don));
-    var five = Number(localStorage.getItem(siumai));
-    var six = Number(localStorage.getItem(jian));
+    var one = Number(localStorage.setItem(hargow));
+    var two = Number(localStorage.setItem(bao));
+    var three = Number(localStorage.setItem(feng));
+    var four = Number(localStorage.setItem(don));
+    var five = Number(localStorage.setItem(siumai));
+    var six = Number(localStorage.setItem(jian));
 
 
       }
@@ -86,7 +86,7 @@ var xmlhttp = new XMLHttpRequest();
  var previous = null;
 var current = null;
     setInterval(function(){
-        $.getJSON("json.Rest.json", function(json){
+        $.getJSON("restaurant.json", function(json){
             current = JSON.stringify(json);
             if (previous && current && previous!==current){
                 location.reload();
