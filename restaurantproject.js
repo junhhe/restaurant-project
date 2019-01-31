@@ -3,7 +3,7 @@ var xmlhttp = new XMLHttpRequest();
       if  (this.readyState == 4 && this.status == 200){   // I will do this when requirements are met
       var mydata = JSON.parse(this.responseText);
       
-    
+    var hargow = mydata.food[0].price;
     var hargowName = mydata.food[0].name;
     
     var bao = mydata.food[1].price;
@@ -38,15 +38,7 @@ var xmlhttp = new XMLHttpRequest();
       
  
       
-  function dimsum1(){
-    var hargow = mydata.food[0].price;
-    /*var uno = Number(localStorage.getItem(hargow));*/
-   var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * 1.04712)*hargow).toFixed(2);
- document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
-  var total = Number(localStorage.getItem(total1));
-  window.alert(hargow);
-      }
+  
       
       /*function dimsum2(){
    var qty = document.getElementById('quantity2').value;
@@ -82,6 +74,14 @@ var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET","restaurant.json",true);
     xmlhttp.send();
  
+ function dimsum1(){
+    var uno = Number(localStorage.getItem(hargow));
+   var qty = document.getElementById('quantity1').value;
+ var total1 = ((qty * 1.04712)*uno).toFixed(2);
+ document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
+  var total = Number(localStorage.getItem(total1));
+  window.alert(uno);
+      }
 
  var previous = null;
 var current = null;
