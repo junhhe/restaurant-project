@@ -39,65 +39,87 @@ var xmlhttp = new XMLHttpRequest();
  document.getElementById("sum5").innerHTML = siumaiName + "<br>" + "$" + siumai + "<br>" + mydata.food[4].description;
  document.getElementById("sum6").innerHTML = jianName + "<br>" + "$" + jian + "<br>" + mydata.food[5].description;
  
-  var one = Number(localStorage.setItem(hargow));
-  var uno = localStorage.setItem(hargowName);
-    var two = Number(localStorage.setItem(bao));
-    var dos = localStorage.setItem(baoName);
-    var three = Number(localStorage.setItem(feng));
-    var tres = localStorage.setItem(fengName);
-    var four = Number(localStorage.setItem(don));
-    var cuatro = localStorage.setItem(donName);
-    var five = Number(localStorage.setItem(siumai));
-    var cinco = localStorage.setItem(siumaiName);
-    var six = Number(localStorage.setItem(jian));
-    var seis = localStorage.setItem(jianName);
+  var one = Number(localStorage.setItem("saveone", hargow));
+  var uno = localStorage.setItem("saveuno", hargowName);
+    var two = Number(localStorage.setItem("savetwo",bao));
+    var dos = localStorage.setItem("savedos",baoName);
+    var three = Number(localStorage.setItem("savethree",feng));
+    var tres = localStorage.setItem("savetres",fengName);
+    var four = Number(localStorage.setItem("savefour",don));
+    var cuatro = localStorage.setItem("savecuatro",donName);
+    var five = Number(localStorage.setItem("savefive",siumai));
+    var cinco = localStorage.setItem("savecinco",siumaiName);
+    var six = Number(localStorage.setItem("savesix",jian));
+    var seis = localStorage.setItem("saveseis", jianName);
+    
   }
     };
 
       
  function dimsum1(){
-   var name1 = Number(localStorage.getItem(hargow));
-   window.alert(name1); //testing
+  var name1 =  localStorage.getItem("saveone");
+   var nameOne =  localStorage.getItem("saveuno");
    var qty = document.getElementById('quantity1').value;
- var total1 = ((qty * 5)*1.04712).toFixed(2);
+ var total1 = ((qty * name1).toFixed(2));
  document.getElementById("buy1").innerHTML = "You total is" + " $" + total1;
  var price1 = Number(localStorage.setItem("firsttotal",total1));
-
+ var get = Number(localStorage.setItem("amount1", qty));
+ var getAmount = Number(localStorage.getItem("amount1"));
 }
   
   function dimsum2(){
+    var name1 =  localStorage.getItem("savetwo");
+   var nameOne =  localStorage.getItem("savedos");
    var qty = document.getElementById('quantity2').value;
- var total2 = ((qty * 1.04712)*3).toFixed(2);
+ var total2 = ((qty *name1).toFixed(2));
  document.getElementById("buy2").innerHTML = "You total is" + " $" + total2;
- var price2= Number(localStorage.setItem(total2));
+ var price2= Number(localStorage.setItem("secondtotal",total2));
+ var get = Number(localStorage.setItem("amount2", qty));
+ var getAmount = Number(localStorage.getItem("amount2"));
 }
       
   function dimsum3(){
+    var name1 =  localStorage.getItem("savethree");
+   var nameOne =  localStorage.getItem("savetres");
    var qty = document.getElementById('quantity3').value;
- var total3 = ((qty * 1.04712)*4).toFixed(2);
+ var total3 = ((qty *name1).toFixed(2));
  document.getElementById("buy3").innerHTML = "You total is" + " $" + total3;
- var price3 = Number(localStorage.setItem(total3));
+ var price3 = Number(localStorage.setItem("thirdtotal", total3));
+ var get = Number(localStorage.setItem("amount3", qty));
+ var getAmount = Number(localStorage.getItem("amount3"));
 }
       
 function dimsum4(){
+  var name1 =  localStorage.getItem("savefour");
+   var nameOne =  localStorage.getItem("savecuatro");
    var qty = document.getElementById('quantity4').value;
- var total4 = ((qty * 1.04712)*1.5).toFixed(2);
+ var total4 = ((qty *name1).toFixed(2));
  document.getElementById("buy4").innerHTML = "You total is" + " $" + total4;
- var price4 = Number(localStorage.setItem(total4));
+ var price4 = Number(localStorage.setItem("fourthtotal",total4));
+ var get = Number(localStorage.setItem("amount4", qty));
+ var getAmount = Number(localStorage.getItem("amount4"));
 }
       
     function dimsum5(){
+      var name1 =  localStorage.getItem("savefive");
+   var nameOne =  localStorage.getItem("savecinco");
    var qty = document.getElementById('quantity5').value;
- var total5 = ((qty * 1.04712)*3.5).toFixed(2);
+ var total5 = ((qty * name1).toFixed(2));
  document.getElementById("buy5").innerHTML = "You total is" + " $" + total5;
- var price5 = Number(localStorage.setItem(total5));
+ var price5 = Number(localStorage.setItem("fifthtotal", total5));
+ var get = Number(localStorage.setItem("amount5", qty));
+ var getAmount = Number(localStorage.getItem("amount5"));
 }
       
       function dimsum6(){
+        var name1 =  localStorage.getItem("savesix");
+   var nameOne =  localStorage.getItem("saveseis");
    var qty = document.getElementById('quantity6').value;
- var total6 = ((qty * 1.04712)*1).toFixed(2);
+ var total6 = ((qty *name1).toFixed(2));
  document.getElementById("buy6").innerHTML = "You total is" + " $" + total6;
- var price6 = Number(localStorage.setItem(total6));
+ var price6 = Number(localStorage.setItem("sixthtotal", total6));
+ var get = Number(localStorage.setItem("amount6", qty));
+ var getAmount = Number(localStorage.getItem("amount6"));
 }
    
       
