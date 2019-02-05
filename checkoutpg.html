@@ -20,7 +20,6 @@
       margin: 0 auto;
       position:relative;
       font-size:12px;
-
     }
     #tip {
            float:right;
@@ -44,9 +43,9 @@
               <button onclick="tipp()">Tips, optional</buttom>
                      <h1 id ="tipss"></h1>
                      <div id="totalbutton">
-                                   <button onclick="overall()">Pay</button>   
+                                   <button onclick="overall()">Pay</button>
                                    <h1 id="results"></h1>
-                            </div>  
+                            </div>
        </div>
         
       
@@ -59,59 +58,42 @@
        var p2 = localStorage.getItem('saveuno');
        var p3 = Number(localStorage.getItem('firsttotal'));
        document.getElementById('total').innerHTML = p1 + " " + p2 + " $" + p3;
-
-       if (document.getElementbyId('quantity1').value=0) {
-              ('total').innerHTMl="";
-       }
-
-
+       
 var p4 = localStorage.getItem('amount2');
        var p5 = localStorage.getItem('savedos');
        var p6 = Number(localStorage.getItem('secondtotal'));
 document.getElementById('total2').innerHTML = p4 + " " + p5 + " $" + p6;
-if (document.getElementbyId('quantity2').value=0) {
-              ('total2').innerHTMl="";
-       }
-/*
+
+
 var p7 = localStorage.getItem('amount3');
        var p8 = localStorage.getItem('savetres');
        var p9 = Number(localStorage.getItem('thirdtotal'));
 document.getElementById('total3').innerHTML = p7 + " " + p8 + " $" + p9;
-
 var p10 = localStorage.getItem('amount4');
        var p11 = localStorage.getItem('savecuatro');
        var p12 = Number(localStorage.getItem('fourthtotal'));
 document.getElementById('total4').innerHTML = p10 + " " + p11 + " $" + p12;
-
-
 var p13 = localStorage.getItem('amount5');
        var p14 = localStorage.getItem('savecinco');
        var p15 = Number(localStorage.getItem('fifthtotal'));
 document.getElementById('total5').innerHTML = p13 + " " + p14 + " $" + p15;
-
-
 var p16 = localStorage.getItem('amount6');
        var p17 = localStorage.getItem('saveseis');
        var p18 = Number(localStorage.getItem('sixthtotal'));
 document.getElementById('total6').innerHTML = p16 + " " + p17 + " $" + p18;
-
-
 var total = Number(p3 + p6 + p9 + p12 + p15 + p18 );
 document.getElementById('results1').innerHTML = "Your total is " + "$" + total + " without tax!";
-
 function tipp(){
        var tipamount = document.getElementById('tips').value;
        document.getElementById('tipss').innerHTML = "$" + tipamount;
 var p19 = Number(localStorage.setItem("fei", tipamount));
 }
-
 function overall(){
        var p20 = Number(localStorage.getItem('fei'));
        var total = Number((((p3 + p6 + p9 + p12 + p15 + p18 ) *1.04712)+p20).toFixed(2));
 document.getElementById('results').innerHTML = "$" + total;
 var p21 = Number(localStorage.setItem("quan", total));
 }
-*/
 
 </script>
 </body>
